@@ -49,7 +49,7 @@ window.topDocument = window.top.document;
  */
 var Global = {
 	//在线手册根目录，默认值
-	rootPath: "http://css.doyoe.com",
+	rootPath: "https://css-handbook.github.io",
 	//是否chm浏览方式
 	isLocal: /^mk:$/i.test(location.protocol),
 	//是否非IE下浏览
@@ -913,5 +913,18 @@ Global.folding($('.g-combobox',topDocument));
 	dytree.prop('loaded', true);
 
 })();
+
+// Google tag (gtag.js)
+const gaScript = document.createElement('script');
+gaScript.async = true;
+gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-QTZ2B0HV28';
+document.body.appendChild(gaScript);
+window.setTimeout(() => {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QTZ2B0HV28');
+}, 3000);
 
 })();

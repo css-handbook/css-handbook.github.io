@@ -31,3 +31,4 @@ test.htm
 *.hhc
 *.hhk
 *.hhp
+.DS_Store

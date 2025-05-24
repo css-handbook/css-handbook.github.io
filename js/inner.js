@@ -913,4 +913,17 @@ Global.folding($('.g-combobox',topDocument));
 
 })();
 
+// Google tag (gtag.js)
+const gaScript = document.createElement('script');
+gaScript.async = true;
+gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-QTZ2B0HV28';
+document.body.appendChild(gaScript);
+window.setTimeout(() => {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QTZ2B0HV28');
+}, 3000);
+
 })();
